@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,12 +18,90 @@
   }
 }
 
+input,
+textarea {
+  text-indent: 20px;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: black;
+}
+
+
+.skillsText {
+  transition: opacity 0.4s;
+  @apply inline-block leading-[1.15] after:content-['_']
+}
+
+
+.iphone-bezels {
+  @apply absolute
+}
+
+
+.iphone-video {
+  @apply flex justify-center items-center
+}
+
+
+
+
+
+
+/*  */
+/*  */
+
+/* local fonts */
+
+font-face {
+  font-family: 'SF_Black';
+  src: url(../../public/fonts/SFPro/Black.otf);
+}
+
+@font-face {
+  font-family: 'SF_Bold';
+  src: url(../../public//fonts/SFPro/Bold.otf);
+}
+
+@font-face {
+  font-family: 'SF_Heavy';
+  src: url(../../public//fonts/SFPro/Heavy.otf);
+}
+
+@font-face {
+  font-family: 'SF_Light';
+  src: url(../../public//fonts/SFPro/Light.otf);
+}
+
+@font-face {
+  font-family: 'SF_Medium';
+  src: url(../../public//fonts/SFPro/Medium.otf);
+}
+
+@font-face {
+  font-family: 'SF_Regular';
+  src: url(../../public//fonts/SFPro/Regular.otf);
+}
+
+@font-face {
+  font-family: 'SF_Semibold';
+  src: url(../../public//fonts/SFPro/Semibold.otf);
+}
+
+@font-face {
+  font-family: 'SF_Thin';
+  src: url(../../public//fonts/SFPro/Thin.otf);
+}
+
+@font-face {
+  font-family: 'SF_Ultralight';
+  src: url(../../public//fonts/SFPro/Ultralight.otf);
 }
