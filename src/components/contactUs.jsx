@@ -6,8 +6,13 @@ import axios from 'axios'
 const ContactUs = () => {
 
     // const [state, handleSubmit, reset] = useForm("contact-form");
+    let env_form = process.env.NEXT_PUBLIC_FORM;
+    let formEndpoint;
+    if (env_form) {
+        formEndpoint = env_form
+    } else formEndpoint = 'https://formspree.io/f/mgegeejj'
 
-    let formEndpoint = 'https://formspree.io/f/mgegeejj'
+    console.log(formEndpoint);
 
     const [status, setStatus] = useState({
         submitted: false,
