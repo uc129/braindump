@@ -9,7 +9,7 @@ const ContactUs = () => {
     let env_form = process.env.NEXT_PUBLIC_FORM;
     let formEndpoint;
     if (env_form) {
-        formEndpoint = env_form
+        formEndpoint = 'https://formspree.io/f/' + env_form
     } else formEndpoint = 'https://formspree.io/f/mgegeejj'
 
     console.log(formEndpoint);
